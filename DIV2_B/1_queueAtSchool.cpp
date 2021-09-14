@@ -1,19 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define deb(x) cout<<#x<<'='<<x<<endl;
-#define deb(x) for(auto k:x){cout<<k<<endl;}
 #define fastio() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL); 
 #define ll long long
 int binary_expo(int a,int b);
   
 void solve()
 {
-       int t;   
-       cin>>t;     
-       while(t--)     
-          { 
+      int n,t;
+      cin>>n>>t;
+      string s;
+      cin>>s;
+      int ct=0;bool flag=0;
+      while(t--){
+ for(int i=1;i<s.length();i++)
+      {
+            if(s[i]=='G'&&s[i-1]=='B')
+            {
+                char c=s[i];
+                s[i]=s[i-1];
+                s[i-1]=c;
+                i++;
+                
+            }
             
-           } 
+      }
+      }
+     
+
+      cout<<s<<endl;
 } 
  
 int main()
